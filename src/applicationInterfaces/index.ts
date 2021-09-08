@@ -33,3 +33,9 @@ export interface IReduxState{
 }
 
 export interface Differences extends IPortfolio{}
+
+export interface DifferenceFrom{
+    differenceFrom : number,
+    name: string,
+    label: string
+}

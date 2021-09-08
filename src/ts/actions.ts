@@ -1,4 +1,4 @@
-import {CurrentPortfolioAmounts, IPortfolio, RiskLevelPercentages, Differences} from '../applicationInterfaces';
+import {CurrentPortfolioAmounts, IPortfolio, RiskLevelPercentages, Differences, DifferenceFrom} from '../applicationInterfaces';
 import constants from './constants';
 
 export function getDefaultPortfolioAmounts(currentAmounts : IPortfolio | null) : CurrentPortfolioAmounts{
@@ -116,6 +116,57 @@ function setNewAmounts(results : CurrentPortfolioAmounts, currentAmounts : IPort
     results.smallCap.newAmmount = results.smallCap.difference === 0 ? currentAmounts.smallCap : currentAmounts.smallCap - results.smallCap.difference;
 }
 
+function getDifferenceFrom(results : CurrentPortfolioAmounts):DifferenceFrom{
+    let differenceInfo :DifferenceFrom = {
+        name: '',
+        differenceFrom: -1,
+        label: ''
+    }
+
+    if(results.bonds.difference < 0){
+        differenceInfo = {name: constants.body.riskTable.header[1].name, label: constants.body.riskTable.header[1].label.replace('%', ''), differenceFrom: results.bonds.difference};
+    } else if(results.midCap.difference < 0){
+        differenceInfo = {name: constants.body.riskTable.header[3].name, label: constants.body.riskTable.header[3].label.replace('%', ''), differenceFrom: results.midCap.difference};
+    } else if(results.largeCap.difference < 0){
+        differenceInfo = {name: constants.body.riskTable.header[2].name, label: constants.body.riskTable.header[2].label.replace('%', ''), differenceFrom: results.largeCap.difference};
+    } else if(results.foreign.difference < 0){
+        differenceInfo = {name: constants.body.riskTable.header[4].name, label: constants.body.riskTable.header[4].label.replace('%', ''), differenceFrom: results.foreign.difference};
+    } else if(results.smallCap.difference < 0){
+        differenceInfo = {name: constants.body.riskTable.header[5].name, label: constants.body.riskTable.header[5].label.replace('%', ''), differenceFrom: results.smallCap.difference};
+    }
+
+    return differenceInfo;
+}
+
 function setRecomendedTransfers(results : CurrentPortfolioAmounts) : void{
+    let transferInfo : string = '';
+    const differenceFrom : DifferenceFrom = getDifferenceFrom(results);
     
+    if(differenceFrom.differenceFrom < 0){
+        let differenceToDivide : number = differenceFrom.differenceFrom;
+        let moneyTransfer : string[] = [];
+
+        if(results.bonds.difference !== 0 && differenceToDivide > 0 && differenceFrom.name !== constants.body.riskTable.header[1].name){
+            moneyTransfer.push(`Transfer $${results.largeCap.difference} from ${differenceFrom.label} to Bonds.`);
+            differenceToDivide -= results.largeCap.difference;
+        }
+        if(results.largeCap.difference !== 0 && differenceToDivide > 0 && differenceFrom.name !== constants.body.riskTable.header[2].name){
+            moneyTransfer.push(`Transfer $${results.largeCap.difference} from ${differenceFrom.label} to Large Cap.`);
+            differenceToDivide -= results.largeCap.difference;
+        }
+        if(results.midCap.difference !== 0 && differenceToDivide > 0 && differenceFrom.name !== constants.body.riskTable.header[3].name){
+            moneyTransfer.push(`Transfer $${results.midCap.difference} from ${differenceFrom.label} to Mid Cap.`);
+            differenceToDivide -= results.midCap.difference;
+        }
+        if(results.foreign.difference !== 0 && differenceToDivide > 0 && differenceFrom.name !== constants.body.riskTable.header[4].name){
+            moneyTransfer.push(`Transfer $${results.foreign.difference} from ${differenceFrom.label} to Foreign.`);
+            differenceToDivide -= results.foreign.difference;
+        }
+        if(results.smallCap.difference !== 0 && differenceToDivide > 0 && differenceFrom.name !== constants.body.riskTable.header[5].name){
+            moneyTransfer.push(`Transfer $${results.smallCap.difference} from ${differenceFrom.label} to Small Cap.`);
+            differenceToDivide -= results.smallCap.difference;
+        }
+        transferInfo+=moneyTransfer.join(' ');
+        results.recommendedTransfers = transferInfo;
+    }
 }
