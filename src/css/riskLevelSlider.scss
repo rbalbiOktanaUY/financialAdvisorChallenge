@@ -1,0 +1,44 @@
+.riskLevel{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    .label{
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        text-transform: capitalize;
+    }
+    .slider{
+        display: flex;
+        flex-direction: row;
+        margin-top: 25px;
+        .range{
+            text-transform: capitalize;
+            &.right{
+                margin-left: -40px;
+            }
+            &.left{
+                margin-right: -33px;
+            }
+        }
+        .buttons{
+            margin-top: 20px;
+            z-index: 99999999;
+            .button{
+                padding: 10px;
+                margin: 5px;
+                background: none;
+                border-radius: 5px;
+                border: 2px solid rgba(109,0,255,1);
+                color: rgba(109,0,255,1);
+        
+                &.active{
+                    border: 2px solid goldenrod;
+                    background: rgba(109,0,255,1);
+                    color: white;
+                    cursor: pointer;
+                }
+            }
+        }
+    }
+}

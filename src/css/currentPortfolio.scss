@@ -1,0 +1,84 @@
+.currentPortfolio{
+    margin-top: 10px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    .actionHeader{
+        width: 50%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: flex-end;
+        margin: 20px auto 5px auto;
+        .button{
+            margin-top: 20px;
+            text-transform: capitalize;
+            font-size: 16px;
+            padding: 5px 60px 5px 60px;
+            border-radius: 5px;
+            border: 2px solid rgba(109,0,255,1);
+            background-color: rgba(109,0,255,1);
+            color: white;
+            display: flex;
+            align-items: center;
+            flex-direction: row;
+            justify-content: space-between;
+            &.disable{
+                border: 2px solid #bf90ff80;
+                background-color: #6d00ff80;
+            }
+            svg{
+                margin-left: 10px;
+            }
+        }
+    }
+    table{
+        text-align: right;
+        border: 1px solid lightgray;
+        tbody{
+            tr{
+                .headerTablePersonalizedPortfolio{
+                    background-color: #eaeaea;
+                }
+                th{
+                    padding-bottom: 15px;
+                    padding: 10px 0px 15px 0px;
+                    text-align: center;
+                }
+                td{
+                    input{
+                        padding: 10px;
+                        border-radius: 5px;
+                        border: 1px solid lightgray;
+                        text-align: right;
+                        &.inputRed{
+                            color: red;
+                        }
+
+                        &.inputGreen{
+                            color: green;
+                        }
+
+                        &.inputBlue{
+                            color: blue;
+                        }
+                    }
+                    &.inputTransfer{
+                        display: flex;
+                        align-items: center;
+                        flex-direction: column;
+                        position: relative;
+                        .inputDisableTransfer{
+                            background-color: white;
+                            background-color: white;
+                            z-index: 9999999;
+                            position: absolute;
+                            height: 10.7rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,173 @@
+[
+    [
+        {
+            "name" : "Bonds %", "data": 80
+        },
+        {
+            "name" : "Large Cap %", "data": 20
+        },
+        {
+            "name" : "Mid Cap %", "data": 0
+        },
+        {
+            "name" : "Foreign %", "data": 0
+        },
+        {
+            "name" : "Small Cap %", "data": 0
+        }
+    ],
+    [
+        {
+            "name" : "Bonds %", "data": 70
+        },
+        {
+            "name" : "Large Cap %", "data": 15
+        },
+        {
+            "name" : "Mid Cap %", "data": 15
+        },
+        {
+            "name" : "Foreign %", "data": 0
+        },
+        {
+            "name" : "Small Cap %", "data": 0
+        }
+    ],
+    [
+        {
+            "name" : "Bonds %", "data": 60
+        },
+        {
+            "name" : "Large Cap %", "data": 15
+        },
+        {
+            "name" : "Mid Cap %", "data": 15
+        },
+        {
+            "name" : "Foreign %", "data": 10
+        },
+        {
+            "name" : "Small Cap %", "data": 0
+        }
+    ],
+    [
+        {
+            "name" : "Bonds %", "data": 50
+        },
+        {
+            "name" : "Large Cap %", "data": 20
+        },
+        {
+            "name" : "Mid Cap %", "data": 20
+        },
+        {
+            "name" : "Foreign %", "data": 10
+        },
+        {
+            "name" : "Small Cap %", "data": 0
+        }
+    ],
+    [
+        {
+            "name" : "Bonds %", "data": 40
+        },
+        {
+            "name" : "Large Cap %", "data": 20
+        },
+        {
+            "name" : "Mid Cap %", "data": 20
+        },
+        {
+            "name" : "Foreign %", "data": 20
+        },
+        {
+            "name" : "Small Cap %", "data": 0
+        }
+    ],
+    [
+        {
+            "name" : "Bonds %", "data": 35
+        },
+        {
+            "name" : "Large Cap %", "data": 25
+        },
+        {
+            "name" : "Mid Cap %", "data": 5
+        },
+        {
+            "name" : "Foreign %", "data": 30
+        },
+        {
+            "name" : "Small Cap %", "data": 5
+        }
+    ],
+    [
+        {
+            "name" : "Bonds %", "data": 20
+        },
+        {
+            "name" : "Large Cap %", "data": 25
+        },
+        {
+            "name" : "Mid Cap %", "data": 25
+        },
+        {
+            "name" : "Foreign %", "data": 25
+        },
+        {
+            "name" : "Small Cap %", "data": 50
+        }
+    ],
+    [
+        {
+            "name" : "Bonds %", "data": 10
+        },
+        {
+            "name" : "Large Cap %", "data": 20
+        },
+        {
+            "name" : "Mid Cap %", "data": 40
+        },
+        {
+            "name" : "Foreign %", "data": 20
+        },
+        {
+            "name" : "Small Cap %", "data": 10
+        }
+    ],
+    [
+        {
+            "name" : "Bonds %", "data": 5
+        },
+        {
+            "name" : "Large Cap %", "data": 15
+        },
+        {
+            "name" : "Mid Cap %", "data": 40
+        },
+        {
+            "name" : "Foreign %", "data": 25
+        },
+        {
+            "name" : "Small Cap %", "data": 15
+        }
+    ],
+    [
+        {
+            "name" : "Bonds %", "data": 0
+        },
+        {
+            "name" : "Large Cap %", "data": 5
+        },
+        {
+            "name" : "Mid Cap %", "data": 25
+        },
+        {
+            "name" : "Foreign %", "data": 30
+        },
+        {
+            "name" : "Small Cap %", "data": 40
+        }
+    ]
+
+]

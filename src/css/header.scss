@@ -1,0 +1,30 @@
+.header{
+    text-align: center;
+    padding: 2rem;
+    border-bottom: 4px solid goldenrod;
+    margin-bottom: 2rem;
+    background: -moz-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(109,0,255,1) 0%, rgba(118,6,138,1) 100%, rgba(106,0,0,1) 100%);
+    background: -webkit-linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(109,0,255,1) 0%, rgba(118,6,138,1) 100%, rgba(106,0,0,1) 100%);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(109,0,255,1) 0%, rgba(118,6,138,1) 100%, rgba(106,0,0,1) 100%);
+    color: white;
+    box-shadow: 1px 15px 30px -19px rgba(0, 0, 0, 0.75);
+    -webkit-box-shadow: 1px 15px 30px -19px rgba(0, 0, 0, 0.75);
+    -moz-box-shadow: 1px 15px 30px -19px rgba(0,0,0,0.75);
+    font-size: 30px;
+    display: flex;
+    align-items: center;
+    flex-direction: column-reverse;
+    justify-content: space-between;
+    height: 3rem;
+    .homeButton{
+        border: none;
+        background: none;
+        color: white;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        svg{
+            height: 2em;
+            width: 2em;
+        }
+    }
+}

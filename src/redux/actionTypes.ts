@@ -1,0 +1,8 @@
+const actionTypes = {
+    SELECT_RISK_LEVEL : 'SELECT_RISK_LEVEL',
+    GET_RISK_LEVEL : 'GET_RISK_LEVEL',
+    REBALANCE: 'REBALANCE',
+    GET_RISK_LEVEL_INFO: 'GET_RISK_LEVEL_INFO'
+}
+
+export default actionTypes;

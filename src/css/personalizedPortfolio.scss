@@ -1,0 +1,29 @@
+.personalizedPortfolio{
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    text-transform: capitalize;
+    span{
+        font-size: 20px;
+        color: rgba(109,0,255,1);
+        margin-top: 15%;
+    }
+    .riskLevelInfo{
+        
+        .riskLabel{
+            margin: 20px 0px 10px 0px;
+        }
+        table{
+            border-collapse: collapse;
+            text-align: center;
+        }
+        table, th, td{
+            border: 1px solid rgb(169, 169, 169);
+        }
+        th{
+            padding: 3px 6px 3px 6px;
+            background-color: rgb(216, 216, 216);
+        }
+    }
+}
